@@ -701,10 +701,9 @@ ZONED DECIMAL: PIC S9(5)      - 5 bytes, signed
 
 ### Branch Strategy
 
-**Current Development Branch:**
-```
-claude/claude-md-mi09inklkdys48m8-01WrWUBkt4VqVgeNKp4rD3DX
-```
+**Branch Naming Pattern:**
+- Branches should follow the pattern: `claude/claude-md-<session-id>`
+- Example: `claude/claude-md-<unique-session-identifier>`
 
 **Important Rules:**
 1. Always develop on branches starting with `claude/`
@@ -737,8 +736,10 @@ Affected files:
 
 **Standard push command:**
 ```bash
-git push -u origin claude/claude-md-mi09inklkdys48m8-01WrWUBkt4VqVgeNKp4rD3DX
+git push -u origin claude/claude-md-<session-id>
 ```
+
+Replace `<session-id>` with the actual session identifier for your current development branch.
 
 **Retry logic for network failures:**
 - Retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s)
